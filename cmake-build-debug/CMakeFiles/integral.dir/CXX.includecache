@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Gleb/Desktop/integral/IntegralCalculation.h
+cmath
+-
+
+/Users/Gleb/Desktop/integral/main.cpp
+iostream
+-
+cstdio
+-
+IntegralCalculation.h
+/Users/Gleb/Desktop/integral/IntegralCalculation.h
+
