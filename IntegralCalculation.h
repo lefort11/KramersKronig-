@@ -10,7 +10,7 @@
 #define delta 0.000000001
 
 
-#define INFINITE 100
+#define M_INFINITY 100
 
 
 /*double CalculateIntegral(double a, double b, std::function<double (double x)> f)
@@ -67,12 +67,12 @@ double CalculateRefractionCoefficient(double lambda, double (*f)(double))
 /*	double value_minus, value_plus;
 
 
-	value_minus = CalculateIntegral(-INFINITE, lambda - delta, [f, lambda](double x)
+	value_minus = CalculateIntegral(-M_INFINITY, lambda - delta, [f, lambda](double x)
 	{
 		return 1/M_PI * f(x) / (lambda - x);
 	});
 
-	value_plus = CalculateIntegral(lambda + delta, INFINITE, [f, lambda](double x)
+	value_plus = CalculateIntegral(lambda + delta, M_INFINITY, [f, lambda](double x)
 	{
 		return 1/M_PI * f(x) / (lambda - x);
 	});
@@ -81,7 +81,7 @@ double CalculateRefractionCoefficient(double lambda, double (*f)(double))
 
 	double value;
 
-	value = CalculateIntegral(delta, +INFINITE, [f, lambda](double x)
+	value = CalculateIntegral(delta, M_INFINITY, [f, lambda](double x)
 	{
 		return 1/M_PI * (f(x+lambda)/(-x) + f(-x+lambda)/x);
 	});
