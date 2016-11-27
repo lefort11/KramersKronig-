@@ -1,0 +1,102 @@
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3031e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_3031e.dir/build.make CMakeFiles/cmTC_3031e.dir/build
+Building C object CMakeFiles/cmTC_3031e.dir/src.c.o
+/usr/local/bin/clang-omp    -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_3031e.dir/src.c.o   -c /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+clang-3.5: warning: argument unused during compilation: '-fopenmp=libomp'
+/Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:7:3: error: use of undeclared identifier 'breaks_on_purpose'
+  breaks_on_purpose
+  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_3031e.dir/src.c.o] Error 1
+make: *** [cmTC_3031e/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ddf65/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_ddf65.dir/build.make CMakeFiles/cmTC_ddf65.dir/build
+Building C object CMakeFiles/cmTC_ddf65.dir/src.c.o
+/usr/local/bin/clang-omp    -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_ddf65.dir/src.c.o   -c /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+/Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.c:7:3: error: use of undeclared identifier 'breaks_on_purpose'
+  breaks_on_purpose
+  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_ddf65.dir/src.c.o] Error 1
+make: *** [cmTC_ddf65/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b3663/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b3663.dir/build.make CMakeFiles/cmTC_b3663.dir/build
+Building CXX object CMakeFiles/cmTC_b3663.dir/src.cxx.o
+/usr/local/bin/clang-omp++     -DOpenMP_FLAG_DETECTED -fopenmp=libomp   -o CMakeFiles/cmTC_b3663.dir/src.cxx.o -c /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+clang-3.5: warning: argument unused during compilation: '-fopenmp=libomp'
+/Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:7:3: error: use of undeclared identifier 'breaks_on_purpose'
+  breaks_on_purpose
+  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b3663.dir/src.cxx.o] Error 1
+make: *** [cmTC_b3663/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED failed with the following output:
+Change Dir: /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9af23/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_9af23.dir/build.make CMakeFiles/cmTC_9af23.dir/build
+Building CXX object CMakeFiles/cmTC_9af23.dir/src.cxx.o
+/usr/local/bin/clang-omp++     -DOpenMP_FLAG_DETECTED   -o CMakeFiles/cmTC_9af23.dir/src.cxx.o -c /Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+/Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:7:3: error: use of undeclared identifier 'breaks_on_purpose'
+  breaks_on_purpose
+  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_9af23.dir/src.cxx.o] Error 1
+make: *** [cmTC_9af23/fast] Error 2
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+

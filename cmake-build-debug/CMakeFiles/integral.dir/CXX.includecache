@@ -9,11 +9,11 @@
 /Users/Gleb/Desktop/integral/IntegralCalculation.h
 cmath
 -
+omp.h
+-
 
 /Users/Gleb/Desktop/integral/main.cpp
 iostream
--
-cstdio
 -
 IntegralCalculation.h
 /Users/Gleb/Desktop/integral/IntegralCalculation.h

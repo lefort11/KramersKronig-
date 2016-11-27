@@ -3,9 +3,9 @@
 
 #include <cmath>
 
-//#include <omp.h>
+#include <omp.h>
 
-#define h 0.005
+#define h 0.0005
 
 #define delta 0.000000001
 
@@ -19,19 +19,20 @@ double CalculateIntegral(double a, double b, std::function<double (double x)> f)
 
 	double* x = new double[n];
 
-//#pragma omp parallel for
+#pragma omp parallel for
 	for(int i = 0; i < n; ++i)
 	{
 		x[i] = a + h * i;
 	}
 
-
 	double value = 0;
 
-//#pragma omp parallel for
+#pragma omp parallel for
 	for(int i = 0; i < n - 1; ++i)
 	{
-		value += (x[i+1] - x[i]) * (f(x[i]) + 4 * f((x[i] + x[i+1]) / 2) + f(x[i+1]));
+		auto pieceValue = (x[i+1] - x[i]) * (f(x[i]) + 4 * f((x[i] + x[i+1]) / 2) + f(x[i+1]));
+#pragma omp atomic
+		value += pieceValue;
 	}
 
 	delete[] x;

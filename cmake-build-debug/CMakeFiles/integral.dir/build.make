@@ -60,15 +60,15 @@ include CMakeFiles/integral.dir/flags.make
 CMakeFiles/integral.dir/main.cpp.o: CMakeFiles/integral.dir/flags.make
 CMakeFiles/integral.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Gleb/Desktop/integral/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/integral.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/integral.dir/main.cpp.o -c /Users/Gleb/Desktop/integral/main.cpp
+	/usr/local/bin/clang-omp++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/integral.dir/main.cpp.o -c /Users/Gleb/Desktop/integral/main.cpp
 
 CMakeFiles/integral.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/integral.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Gleb/Desktop/integral/main.cpp > CMakeFiles/integral.dir/main.cpp.i
+	/usr/local/bin/clang-omp++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Gleb/Desktop/integral/main.cpp > CMakeFiles/integral.dir/main.cpp.i
 
 CMakeFiles/integral.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/integral.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Gleb/Desktop/integral/main.cpp -o CMakeFiles/integral.dir/main.cpp.s
+	/usr/local/bin/clang-omp++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Gleb/Desktop/integral/main.cpp -o CMakeFiles/integral.dir/main.cpp.s
 
 CMakeFiles/integral.dir/main.cpp.o.requires:
 
