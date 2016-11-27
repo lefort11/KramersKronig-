@@ -39,7 +39,7 @@ double CalculateIntegral(double a, double b, std::function<double (double x)> f)
 	return value / 6.0;
 }
 
-double CalculateRefractionCoefficient(double lambda, double (*f)(double))
+double CalculateRefractionCoefficient(double lambda, std::function<double (double x)> f)
 {
 	double value;
 

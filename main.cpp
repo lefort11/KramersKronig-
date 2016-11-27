@@ -20,7 +20,7 @@ int main()
 	{
 		fprintf(file, "%f %f\n", lambda_grid[i], CalculateRefractionCoefficient(lambda_grid[i], [](double x)
 		{
-			return 1.0 * exp(-350 * M_PI * (x - 0.5) * (x - 0.5));
+			return 1.0 * exp(-350 * M_PI * (x - 0.52) * (x - 0.52));
 		}));
 	}
 	fclose(file);
