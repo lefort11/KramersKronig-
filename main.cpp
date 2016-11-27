@@ -25,6 +25,5 @@ int main()
 	fclose(file);
 	delete[] lambda_grid;
 
-
 	return 0;
 }

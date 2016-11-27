@@ -2,13 +2,13 @@
 #define INTEGRAL_INTEGRALCALCULATION_H
 
 #include <cmath>
-
 #include <omp.h>
+
+
 
 #define h 0.0005
 
 #define delta 0.000000001
-
 
 #define M_INFINITY 5
 
@@ -31,7 +31,7 @@ double CalculateIntegral(double a, double b, std::function<double (double x)> f)
 	for(int i = 0; i < n - 1; ++i)
 	{
 		auto pieceValue = (x[i+1] - x[i]) * (f(x[i]) + 4 * f((x[i] + x[i+1]) / 2) + f(x[i+1]));
-#pragma omp atomic
+	#pragma omp atomic
 		value += pieceValue;
 	}
 

@@ -3,10 +3,10 @@ project(integral)
 
 set(CMAKE_CXX_STANDARD 11)
 
-
-set(CMAKE_C_COMPILER /usr/local/bin/clang-omp CACHE FILEPATH "C compiler" FORCE)
-set(CMAKE_CXX_COMPILER /usr/local/bin/clang-omp++ CACHE FILEPATH "C++ compiler" FORCE)
-
+if(APPLE)
+    set(CMAKE_C_COMPILER /usr/local/bin/clang-omp CACHE FILEPATH "C compiler" FORCE)
+    set(CMAKE_CXX_COMPILER /usr/local/bin/clang-omp++ CACHE FILEPATH "C++ compiler" FORCE)
+endif(APPLE)
 
 include_directories(/usr/local/include)
 
