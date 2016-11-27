@@ -5,36 +5,13 @@
 
 //#include <omp.h>
 
-#define h 0.00005
+#define h 0.005
 
 #define delta 0.000000001
 
 
-#define M_INFINITY 100
+#define M_INFINITY 5
 
-
-/*double CalculateIntegral(double a, double b, std::function<double (double x)> f)
-{
-	int n = static_cast<int>((b - a) / h);
-
-	double* x = new double[n];
-
-	for(int i = 0; i < n; ++i)
-	{
-		x[i] = a + h * i;
-	}
-
-
-	double value = 0;
-	for(int i = 0; i < n - 1; ++i)
-	{
-		value += (f(x[i]) + f(x[i+1])) * (x[i+1] - x[i]);
-	}
-
-	delete[] x;
-
-	return 0.5 * value;
-} */
 
 double CalculateIntegral(double a, double b, std::function<double (double x)> f)
 {
@@ -64,21 +41,6 @@ double CalculateIntegral(double a, double b, std::function<double (double x)> f)
 
 double CalculateRefractionCoefficient(double lambda, double (*f)(double))
 {
-/*	double value_minus, value_plus;
-
-
-	value_minus = CalculateIntegral(-M_INFINITY, lambda - delta, [f, lambda](double x)
-	{
-		return 1/M_PI * f(x) / (lambda - x);
-	});
-
-	value_plus = CalculateIntegral(lambda + delta, M_INFINITY, [f, lambda](double x)
-	{
-		return 1/M_PI * f(x) / (lambda - x);
-	});
-
-	return value_minus + value_plus + 1; */
-
 	double value;
 
 	value = CalculateIntegral(delta, M_INFINITY, [f, lambda](double x)
